@@ -34,7 +34,7 @@ echo
 
 # Secretos: lo obvio, pero lo que más caro sale.
 barrido "credenciales (sk-, ghp_, PAT, PEM, Bearer, AWS)" \
-  'sk-[a-zA-Z0-9]{10,}|ghp_[a-zA-Z0-9]{10,}|github_pat_|xoxb-|AKIA[0-9A-Z]{12}|-----BEGIN|Bearer +[a-zA-Z0-9._-]{16,}'
+  'sk-[a-zA-Z0-9_-]{16,}|ghp_[a-zA-Z0-9]{10,}|github_pat_|xoxb-|AKIA[0-9A-Z]{12}|-----BEGIN|Bearer +[a-zA-Z0-9._-]{16,}'
 
 # Rutas de máquina: delatan usuario, estructura y a veces la organización.
 barrido "rutas absolutas de una máquina real" \
