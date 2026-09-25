@@ -1,6 +1,6 @@
 ---
 name: punto-de-guardado
-description: Usar cuando el usuario quiere guardar el trabajo de una sesión con un agente SIN terminar el día — "guarda", "guarda y seguimos", "checkpoint", "quick save", "wrap it up", "cierra este frente", "respalda lo que llevamos". También cuando el contexto de la conversación ya está gordo o antes de una tarea riesgosa. NO usar para el cierre del día (ese deja además la lista de mañana y los aprendizajes) ni para un resumen que no guarda nada.
+description: Usar cuando el usuario cierra una sesión de trabajo con un agente, a cualquier hora (también la última del día) — "guarda", "guarda y seguimos", "checkpoint", "quick save", "wrap it up", "cierra este frente", "respalda lo que llevamos", "ya estuvo por hoy". También cuando el contexto de la conversación ya está gordo o antes de una tarea riesgosa. NO usar para un resumen que no guarda nada.
 ---
 
 # punto-de-guardado
@@ -22,7 +22,6 @@ herede un estado que miente.
 
 ## Cuándo NO aplica
 
-- Cierre del día: ese ritual además deja la lista de mañana y anota aprendizajes.
 - Solo saber cómo vamos: eso es un balance, no guarda nada.
 - A media edición con archivos rotos: primero termina o revierte el paso en curso.
 
@@ -31,7 +30,9 @@ herede un estado que miente.
 No preguntes "¿guardo y sigo, o guardo y abro sesión nueva?". La gente usa una sola frase
 para todo, y muchas veces sigue trabajando justo después, casi siempre para hacer lo que el
 guardado le dejó listo (aprobar un cambio, desplegar). Guarda siempre igual; sugiere sesión
-nueva solo si el contexto está gordo o cambia el frente.
+nueva solo si el contexto está gordo o cambia el frente. Si es la última sesión del día, es el
+mismo ritual: el "Te toca" es la lista de mañana, y la línea con hora que deja en las notas
+marca cuál fue la última sesión (mejor que la fecha de edición de un archivo).
 
 ## Pasos
 
@@ -51,9 +52,14 @@ nueva solo si el contexto está gordo o cambia el frente.
    chat; el siguiente arranque lee las notas. Actualiza la nota del frente de hoy (no crees
    otra por cada guardado) con estado exacto, decisiones y una línea
    `RETOMA: <tarea/archivo/paso>`. Si hay un índice que se carga al inicio de cada sesión,
-   su línea va corta y con el RETOMA.
-5. **Línea de cierre**, siempre con todos los estados; nada implícito:
-   - `versiones ✅ 2 commits (sin commitear: config.json — otra sesión) · tareas ✅ 1 comentada / sin tareas tocadas · notas ✅ <nota>`
+   su línea va corta y con el RETOMA. Deja además una línea con la hora en la nota del día:
+   así el arranque de mañana sabe cuál fue la última sesión.
+5. **Procesos que quedaron corriendo.** Lista solo lo que ESTA sesión lanzó y sigue vivo
+   (servidores de prueba, monitores, tareas largas). Detén esos, o declara cada uno con cómo
+   detenerlo. Nunca toques procesos de otras sesiones, tareas programadas ni servicios del
+   sistema; en duda, declara en vez de matar.
+6. **Línea de cierre**, siempre con todos los estados; nada implícito:
+   - `versiones ✅ 2 commits (sin commitear: config.json — otra sesión) · tareas ✅ 1 comentada / sin tareas tocadas · notas ✅ <nota> · procesos ✅ ninguno / queda <X>`
    - **Te toca:** 1–3 acciones que solo el usuario puede hacer (aprobar el cambio, desplegar)
      o "nada".
    - Solo si aplica: "Recomiendo sesión nueva (contexto gordo): retoma con el RETOMA de
