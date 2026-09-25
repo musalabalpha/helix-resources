@@ -19,6 +19,8 @@ Incluye [`verificar.sh`](starter-kit/verificar.sh), que comprueba que el hook de
 Skills reutilizables, una carpeta por skill. Se consultan y se copian sueltas, no se clonan en bloque.
 
 - [`gobernanza-de-tablero/`](skills/gobernanza-de-tablero/) — qué hacer cuando el gestor de tareas dejó de servir: backlog inmanejable, todo en prioridad alta, nada con dueño. No limpia el tablero: primero saca por entrevista el criterio del dueño y limpia con ese criterio. Incluye la clasificación de compromiso / deseo / vigilancia, cómo obtener una definición verificable de "terminado", y el modo aprendiz para no dejar que un proceso automático empiece borrando.
+- [`balance-de-sesion/`](skills/balance-de-sesion/) — el saldo honesto de una sesión larga con un agente: qué se logró, qué no salió, qué se trabó y qué queda (tuyo o del agente), cada línea con prueba, más una sugerencia calibrada de si conviene parar. También sirve como primer paso de un ritual de cierre del día.
+- [`arranque-del-dia/`](skills/arranque-del-dia/) — ritual de inicio de jornada en menos de 30 líneas: lo que solo tú puedes destrabar, lo que pasó mientras no estabas, lo que toca hoy y un plan de máximo 3 prioridades. Su pieza clave es el filtro anti-viejo: no repite pendientes que ya se resolvieron.
 
 ## Regla de entrada
 
