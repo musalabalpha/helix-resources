@@ -27,6 +27,8 @@ Skills reutilizables, una carpeta por skill. Se consultan y se copian sueltas, n
 
 ## Regla de entrada
 
+Las metodologías propietarias de Musa no se publican aquí. Toda incorporación requiere su autorización explícita.
+
 Todo lo que entre a este repo pasa primero por [`verificar-fugas.sh`](verificar-fugas.sh):
 
 ```bash
